@@ -9,7 +9,7 @@
 
 **Campus Virtual de la Asignatura**
 
-* [Heroku](https://ajax-ecma6-modules-edu-daniel.herokuapp.com/)
+* [Heroku](https://ajax-ecma6-modules-edu-daniel2.herokuapp.com/)
 **Campus Virtual de la Asignatura**
 
 * [Procesadores de Lenguajes](https://campusvirtual.ull.es/1516/course/view.php?id=178)
