@@ -81,12 +81,11 @@ $(document).ready(() => {
    $('button.example').each( (_,y) => {
      $(y).click( () => { dump(`${$(y).text()}.txt`); });
    });
-  $("#save").click(() => {
+ /* $("#save").click(() => {
           if (window.localStorage) localStorage.original = original.value;
-          $.get("/mongo/" + $("#titulo").val(), {
-            content: $("#original").val()
+
            });
-         });
+         });*/
 
     let dropZone = $('.drop_zone')[0];
     dropZone.addEventListener('dragover', handleDragOver, false);
