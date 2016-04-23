@@ -1,16 +1,82 @@
-table.center {
-	font-weight: bold;
-	color: black;
-	text-align: center;
+input {
+  position: right;
+  top: 1em;
+  left: 30%; }
 
-	margin-left: 90px;
-	margin-top: 10px;
-	
-	border: ridge;
-	border-color: blue;
-	
-	background-color: white;	
+textarea {
+  border-color: rgba(23, 86, 202, 0.3); }
+
+table {
+  font-size: 20px;
+  font-size: 2rem;
+  border-color: #eee; }
+
+#finaltable:hover td {
+  background-color: #F4FA58; }
+
+#link {
+  background-color: white;
 }
-.output tr:nth-child(odd)    { background-color:#eee; }
-.output tr:nth-child(even)   { background-color:#00FF66; }
-.error td{ background-color: red; }
+
+tr:nth-child(odd) {
+  background-color: #eee; }
+
+tr:nth-child(even) {
+  background-color: rgba(0, 164, 42, 0.8); }
+
+tr.error {
+  background-color: red; }
+
+html {
+  background-color: red;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 10%; 
+  
+}
+
+button.hidden {
+  display: none;
+}
+
+.contenido {
+  background-color: rgba(130, 159, 246, 0.4);
+  font-size: 20px;
+}
+
+#result {
+  position: center;
+  border-color: red;
+  font-size: 20px;
+  font-size: 2rem; }
+
+#header {
+  position: top;
+  top: 1em;
+  left: 30%;
+  padding: 5px;
+  font-style: italic;
+  background-color: #eee; }
+
+.boton {
+  padding: 15px 32px;
+  background-color: #F4FA58;
+  border-color: #743EA5; }
+  .boton:hover {
+    background-color: #eee; }
+
+h1 {
+  font-size: 20px;
+  font-size: 2rem;
+  margin: 4%;
+  text-align: center;
+  padding: 1%;
+  color: #000000;
+  background-color: #eee; }
+h1:hover {
+  background-color: yellow;
+}
+
+/*# sourceMappingURL=global.css.map */

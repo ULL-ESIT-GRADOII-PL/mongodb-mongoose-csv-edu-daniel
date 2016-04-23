@@ -1,0 +1,99 @@
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin cover-background($img-uri, $background-top:"center", $background-left:"center", $background-attachment:"fixed") {
+  background: url($img-uri) no-repeat unquote($background-top) unquote($background-left) unquote($background-attachment);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin btn-theme {
+   padding: 15px 32px;
+   background-color: $colorHover;
+   border-color: #743EA5;
+   &:hover {
+      background-color: $colorBlanco;
+   }
+ }
+
+$font-stack:   Helvetica, sans-serif;
+$backgroundcolor:  #DA9797;
+$colorNegro: #000000;
+$colorBlanco: #eee;
+$colorVerde: rgba(0, 164, 42, 0.8);
+$colorHover: #F4FA58;
+$colorFondo:   rgba(23, 86, 202, 0.3);
+
+$tamanoAplicacion: 650px;
+
+input        { @include position(right, $top: 1em, $left: 30%); }
+textarea     { border-color: $colorFondo; }
+table        {
+  @include font-size(2);
+  border-color: $colorBlanco;
+}
+
+#finaltable:hover td { background-color: $colorHover; }
+tr:nth-child(odd)    {
+  background-color:$colorBlanco; }
+tr:nth-child(even)    { background-color:$colorVerde }
+tr.error       { background-color: red;}
+
+html {
+  @include centerer;
+  @include cover-background('../invierno.jpg');
+  padding: 10%;
+}
+
+#fondo_tabla {
+  background-color: $colorFondo;
+  padding: 5%;
+  padding-right:  10%;
+  width: $tamanoAplicacion;
+}
+
+#result      {
+  @include position(top, $top: 1em, $left: 50%);
+  border-color: red;
+  @include font-size(2);
+}
+
+#header {
+  @include position(top, $top: 1em, $left: 30%);
+  padding: 5px;
+  font-style: italic;
+  background-color: $colorBlanco;
+
+}
+
+.boton {
+   @include btn-theme();
+}
+
+h1 {
+    @include font-size(2);
+    margin: 4%;
+    text-align: center;
+    padding:1%;
+    color: $colorNegro;
+    background-color: $colorBlanco;
+}
