@@ -43,6 +43,15 @@ app.get('/mongo/', function(req, res) {
     });
 });
 
+app.get('/find', function(req, res) {    
+    Input.find({}, function(err, docs) {
+        if (err)
+            return err;
+        res.send(docs);
+    });
+});
+
+
 app.listen(app.get('port'), () => {
     console.log(`Node app is running at localhost: ${app.get('port')}` );
 });
