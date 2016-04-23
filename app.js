@@ -1,10 +1,10 @@
 "use esversion: 6";
 
-const express = require('express');
-const app = express();
-const path = require('path');
-const expressLayouts = require('express-ejs-layouts');
-const mongoose = require('mongoose');
+express = require('express');
+app = express();
+path = require('path');
+expressLayouts = require('express-ejs-layouts');
+mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/csv'); /* Iniciamos la conexión con la base de datos */
 
@@ -50,7 +50,6 @@ app.get('/find', function(req, res) {
         res.send(docs);
     });
 });
-
 
 app.listen(app.get('port'), () => {
     console.log(`Node app is running at localhost: ${app.get('port')}` );
