@@ -78,9 +78,25 @@ $(document).ready(() => {
         );
    });
    // Botones para la textarea
-   $('button.example').each( (_,y) => {
-     $(y).click( () => { dump(`${$(y).text()}.txt`); });
-   });
+    $('button.example').each( (_,y) => {
+      $(y).click( () => { 
+        $.get("/findPorNombre", {
+          name: $(y).text()
+        },
+        (data) => {
+          $("#original").val(data[0].content);
+        });
+      });
+    });
+
+    $.get("/find", {}, (data) => {
+      for (var i = 0; i < 4; i++) {
+          if (data[i]) {
+            $('button.example').get(i).className = "example";
+            $('button.example').get(i).textContent = data[i].name;
+          }
+      }
+    });
 
     $("#save").click(() => {
       if (window.localStorage) localStorage.original = original.value;
