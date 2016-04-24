@@ -29,6 +29,13 @@ app.get('/csv', (request, response) => { //
 const Input = require('./models/db'); // Usamos nuestro modelo.
 
 app.get('/mongo/', function(req, res) {
+    Input.find({}, function(err, docs) {
+        if (err)
+            return err;
+        if (docs.length >= 4) { // 4 documentos como máximo, pasado este numero se borra el último.
+            Input.find({ name: docs[3].name }).remove().exec();
+        }
+    });
     let input = new Input({
         "name": req.query.name,
         "content": req.query.content
