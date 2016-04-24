@@ -58,6 +58,15 @@ app.get('/find', function(req, res) {
     });
 });
 
+app.get('/findById', function(req, res) { // Localizar las entradas por el nombre especificado.
+  especificado en la request*/
+    Input.find({
+        name: req.query.name
+    }, function(err, docs) {
+        res.send(docs);
+    });
+});
+
 app.listen(app.get('port'), () => {
     console.log(`Node app is running at localhost: ${app.get('port')}` );
 });
