@@ -1,4 +1,4 @@
-"use esversion: 6";
+"use strict";
 
 express = require('express');
 app = express();
