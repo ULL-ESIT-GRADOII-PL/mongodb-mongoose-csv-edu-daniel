@@ -9,7 +9,7 @@
 
 * [App](https://mongodb-mongoose-edu-daniel.herokuapp.com/)
 
-**Despliegue en C9 **
+**Despliegue en C9**
 
 * [C9](https://mongodb-mongoose-csv-edu-daniel-danfp2.c9users.io/)
 
